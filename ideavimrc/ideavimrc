@@ -1,0 +1,47 @@
+set surround
+
+set relativenumber number
+set incsearch hlsearch
+set ignorecase smartcase
+set clipboard+=unnamed
+set scrolloff=15
+set showmode
+
+let mapleader='-'
+
+nnoremap <Esc> :nohlsearch<CR>
+
+inoremap <c-j> <c-r>0<ESC>
+" VimMotionJump{Next,Previous}
+nnoremap <c-p> <c-i>
+nnoremap <c-[> <c-t>
+nnoremap <tab> <c-w>w
+
+nnoremap Y y$
+nnoremap Q @q
+
+nnoremap <leader>gq :action Vcs.QuickListPopupAction<CR>
+nnoremap <leader>gw :action GotoDeclaration<cr>
+nnoremap <leader>ge :action GotoSuperMethod<cr>
+nnoremap <leader>gr :action GotoRelated<cr>
+nnoremap <leader>gt :action GotoTest<cr>
+nnoremap <leader>gy :action ShowUsages<cr>
+nnoremap <leader>gu :action FindUsages<cr>
+nnoremap <leader>gi :action GotoImplementation<cr>
+nnoremap <leader>go :action OptimizeImports<cr>
+nnoremap <leader>gp :action Annotate<cr>
+
+nnoremap <leader>ga :action GotoAction<cr>
+nnoremap <leader>re :action RenameElement<cr>
+nnoremap <leader>rf :action RenameFile<cr>
+
+nmap [c :action VcsShowPrevChangeMarker<cr>
+nmap ]c :action VcsShowNextChangeMarker<cr>
+
+nnoremap [d :action QuickImplementations<cr>
+nnoremap ]d :action QuickImplementations<cr>
+
+nnoremap ]e :action GotoNextError<cr>
+nnoremap [e :action GotoPreviousError<cr>
+
+"nnoremap <leader>gq :action ReformatCode<cr>
