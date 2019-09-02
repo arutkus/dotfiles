@@ -8,9 +8,8 @@ export FZF_DEFAULT_OPTS="--ansi --preview-window 'right:60%' --preview 'bat --co
 
 export KEYTIMEOUT=1
 
-# Change this variable if your dotfiles are not in this path!!!
 # Useful for the install scripts
-export DOTFILES="$HOME/.dotfiles"
+export DOTFILES="$HOME/dotfiles"
 
 export EDITOR="nvim"
 export GIT_EDITOR="nvim"

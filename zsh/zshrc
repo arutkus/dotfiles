@@ -5,7 +5,7 @@ export ZSH=/Users/stormis/.oh-my-zsh
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
 source $ZSH/oh-my-zsh.sh
-source ${ZDOTDIR:-$HOME}/.dotfiles/shell/startup
+source ${ZDOTDIR:-$HOME}/dotfiles/zsh/startup
 
 plugins=(
   git git-flow history per-directory-history colored-man-pages colorize extract laravel brew osx docker tmux tmuxinator
