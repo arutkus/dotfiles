@@ -1,0 +1,28 @@
+export ZSH=/Users/stormis/.oh-my-zsh
+
+. /usr/local/etc/profile.d/z.sh
+
+ZSH_THEME="powerlevel10k/powerlevel10k"
+
+source $ZSH/oh-my-zsh.sh
+source ${ZDOTDIR:-$HOME}/.dotfiles/shell/startup
+
+plugins=(
+  git git-flow history per-directory-history colored-man-pages colorize extract laravel brew osx docker tmux tmuxinator
+)
+
+DEFAULT_USER=whoami``
+prompt_context () { }
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Search with fzf and open selected file with Vim
+bindkey -s '^v' 'vim $(fzf);^M'
+
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
+
+if [ -z "$TMUX" ]
+then
+  tmux attach -t stormis || mux start jrnl 
+fi
