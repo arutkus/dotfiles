@@ -29,6 +29,7 @@ Plug 'baverman/vial-http'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-airline/vim-airline'
 Plug 'morhetz/gruvbox'
+Plug 'lifepillar/vim-gruvbox8'
 Plug 'sheerun/vim-polyglot'
 "Plug 'posva/vim-vue'
 
