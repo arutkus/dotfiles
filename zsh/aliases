@@ -21,7 +21,7 @@ alias rm='rm -i'
 
 alias evim='nvim ~/nvim/init.vim'
 alias ezsh='nvim ~/.zshrc'
-alias eali='nvim ~/.dotfiles/shell/aliases && sz'
+alias eali='nvim ~/dotfiles/aliases && sz'
 
 ##################
 ### NAVIGATION ###
@@ -30,6 +30,7 @@ alias eali='nvim ~/.dotfiles/shell/aliases && sz'
 alias wg='cd ~/sites/whatagraph && la'
 alias sites='cd ~/sites && la'
 alias crm='cd ~/sites/crm && la'
+alias dot='cd ~/dotfiles && la && status'
 alias dock='cd ~/Documents/docker/yno-img && la'
 alias docs='cd ~/sites/stormdocs/docs && la'
 alias vi='cd ~/nvim && la'
