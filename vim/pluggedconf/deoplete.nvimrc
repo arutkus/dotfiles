@@ -5,7 +5,7 @@ set completeopt=menu,menuone,preview,noselect,noinsert
 
 " suppress the annoying 'match x of y', 'The only match' and 'Pattern not
 " found' messages
-"set shortmess+=c
+set shortmess+=c
 
 " deoplete tab-complete
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
@@ -19,6 +19,17 @@ let g:deoplete#auto_refresh_delay= 5
 let g:deoplete#enable_smart_case = 1
 let g:deoplete#enable_camel_case = 1
 let g:deoplete#enable_refresh_always = 1
+let g:deoplete#auto_completion_start_length = 1
+
+let g:deoplete#auto_completion_start_length = 1
+
+"Note that -> added
+let g:deoplete#delimiters = ['/', '.', '::', ':', '#', '->']
+
+let g:deoplete#sources = {}
+let g:deoplete#sources._ =['omni', 'phpactor', 'buffer', 'member', 'tag', 'ultisnips', 'file']
+
+let g:deoplete#omni#input_patterns = {}
 
 set completeopt -=preview
 
