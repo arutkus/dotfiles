@@ -14,6 +14,9 @@ nnoremap <Down>  :resize -2<CR>
 nnoremap <Left>  :vertical resize +2<CR>
 nnoremap <Right> :vertical resize -2<CR>
 
+map gn :bn<cr>
+map gp :bp<cr>
+map gd :bd<cr>
 
 nmap <ScrollWheelUp> <nop>
 nmap <S-ScrollWheelUp> <nop>
