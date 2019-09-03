@@ -6,3 +6,6 @@ nmap <Leader>rf :w<CR>:TestFile<CR>
 nmap <Leader>rl :w<CR>:TestLast<CR>
 nmap <Leader>rn :w<CR>:TestNearest<CR>
 nmap <Leader>rv :w<CR>:TestVisit<CR>
+
+let test#strategy = "neovim"
+let test#neovim#term_position = "vertical botright"
