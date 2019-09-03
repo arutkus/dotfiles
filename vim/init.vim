@@ -1,5 +1,6 @@
 call plug#begin('~/nvim/plugged')
 
+" $HOME/nvim/pluggedconf/vim-tmux-navigator.nvimrc
 Plug 'christoomey/vim-tmux-navigator'
 
 "--- Completion ---
