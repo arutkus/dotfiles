@@ -71,6 +71,7 @@ Plug 'honza/vim-snippets'
 Plug 'machakann/vim-highlightedyank'      " Highlight briefly every yank text
 Plug 'tpope/vim-surround'                 " Surround with whatever cs, ds, yss
 Plug 'tpope/vim-repeat'
+" $HOME/nvim/pluggedconf/vim-commentary.nvimrc
 Plug 'tpope/vim-commentary'
 Plug 'jiangmiao/auto-pairs'
 
