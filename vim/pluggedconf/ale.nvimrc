@@ -11,7 +11,11 @@ let g:ale_sign_style_warning = '!'
 
 let g:ale_linters = {
   \ 'php': ['php', 'phpcs', 'phpmd'],
+  \ 'javascript': ['eslint'],
+  \ 'vue': ['eslint']
   \ }
+
+let g:ale_linter_aliases = {'vue': ['css', 'javascript']}
 
 let g:ale_php_phpcs_standard = 'PSR2'
 
