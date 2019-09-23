@@ -38,8 +38,10 @@ Plug 'sheerun/vim-polyglot'
 Plug 'mhinz/vim-startify' "Startup screen
 Plug 'vimwiki/vimwiki'
 Plug 'SidOfc/mkdx', { 'for': 'markdown' } " lot of keystroke for markdown
-Plug 'junegunn/goyo.vim', { 'for': ['markdown','text'] } " Distraction-free
-Plug 'junegunn/limelight.vim', { 'for': ['markdown','text'] } " Hyperfocus-writing
+" $HOME/nvim/pluggedconf/goyo.nvimrc
+Plug 'junegunn/goyo.vim' " Distraction-free
+" $HOME/nvim/pluggedconf/limelight.nvimrc
+Plug 'junegunn/limelight.vim' " Hyperfocus-writing
 
 "--- GIT ---
 Plug 'tpope/vim-fugitive'
@@ -105,4 +107,3 @@ source $HOME/nvim/config/mappings/leader.nvimrc
 for file in split(glob("~/nvim/pluggedconf/*.nvimrc"), '\n')
     exe 'source' file
 endfor
-
