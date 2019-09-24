@@ -20,7 +20,7 @@ syntax enable
 set background=dark
 colorscheme gruvbox8_hard
 
-"set t_cO=256
+set t_cO=256
 set relativenumber number
 set cursorline            " highlight current line
 set hlsearch              " highlight all searched

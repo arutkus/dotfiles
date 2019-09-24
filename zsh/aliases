@@ -10,6 +10,7 @@ alias cat='bat'
 alias mux='tmuxinator'
 alias cgr='composer global require'
 alias t='todo.sh'
+alias grf='~/go/bin/gf'
 
 alias cp='cp -iv'
 alias mv='mv -iv'
@@ -21,7 +22,7 @@ alias rm='rm -i'
 
 alias evim='nvim ~/nvim/init.vim'
 alias ezsh='nvim ~/.zshrc'
-alias eali='nvim ~/dotfiles/aliases && sz'
+alias eali='nvim ~/dotfiles/zsh/aliases && sz'
 
 ##################
 ### NAVIGATION ###

@@ -10,3 +10,5 @@ let g:airline_powerline_fonts = 1
 
 let g:localdb = 'mysql://root@localhost/whatagraph'
 let g:datadb = 'mysql://root@localhost/whatagraph_data'
+
+let g:testdb = $AUDR1
