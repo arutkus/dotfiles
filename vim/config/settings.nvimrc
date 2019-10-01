@@ -42,3 +42,7 @@ set smartindent           " automatically insert one extra level of indentation
 set smarttab              " use tabs at the start of a line, spaces elsewhere
 
 set hidden
+
+set tags+=./.git/tags;
+set path+=**
+set wildmenu

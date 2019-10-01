@@ -107,5 +107,3 @@ source $HOME/nvim/config/mappings/leader.nvimrc
 for file in split(glob("~/nvim/pluggedconf/*.nvimrc"), '\n')
     exe 'source' file
 endfor
-
-set tags+=./.git/tags;

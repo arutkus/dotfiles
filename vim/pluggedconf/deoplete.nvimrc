@@ -1,7 +1,6 @@
 let g:deoplete#enable_at_startup = 1
 
 set completeopt=menu,menuone,preview,noselect,noinsert
-"set completeopt=noinsert,menuone,noselect
 
 " suppress the annoying 'match x of y', 'The only match' and 'Pattern not
 " found' messages
@@ -21,8 +20,6 @@ let g:deoplete#enable_camel_case = 1
 let g:deoplete#enable_refresh_always = 1
 let g:deoplete#auto_completion_start_length = 1
 
-let g:deoplete#auto_completion_start_length = 1
-
 "Note that -> added
 let g:deoplete#delimiters = ['/', '.', '::', ':', '#', '->']
 
@@ -30,8 +27,6 @@ let g:deoplete#sources = {}
 let g:deoplete#sources._ =['omni', 'phpactor', 'buffer', 'member', 'tag', 'ultisnips', 'file']
 
 let g:deoplete#omni#input_patterns = {}
-
-set completeopt -=preview
 
 call deoplete#custom#source('_', 'max_menu_width', 120)
 

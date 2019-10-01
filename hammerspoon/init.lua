@@ -121,24 +121,28 @@ hs.hotkey.bind(hyper, 'return' , function()
     toogleApp('Kitty') 
 end)
 
-hs.hotkey.bind(hyper, '1' , function()
+hs.hotkey.bind(hyper, '0' , function()
     toogleApp('Firefox')
 end)
 
-hs.hotkey.bind(hyper, '2' , function()
+hs.hotkey.bind(hyper, '9' , function()
     toogleApp('Discord')
 end)
 
-hs.hotkey.bind(hyper, '3' , function()
-    toogleApp('Sequel Pro Nightly')
+hs.hotkey.bind(hyper, '8' , function()
+    toogleApp('Mail')
 end)
 
-hs.hotkey.bind(hyper, '4' , function()
+hs.hotkey.bind(hyper, '7' , function()
     toogleApp('Spotify')
 end)
 
-hs.hotkey.bind(hyper, '8' , function()
+hs.hotkey.bind(hyper, '2' , function()
     toogleApp('PhpStorm')
+end)
+
+hs.hotkey.bind(hyper, '1' , function()
+    toogleApp('Sequel Pro Nightly')
 end)
 
 function toogleApp(_app) 
