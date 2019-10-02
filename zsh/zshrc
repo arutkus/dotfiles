@@ -17,7 +17,7 @@ prompt_context () { }
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Search with fzf and open selected file with Vim
-bindkey -s '^v' 'vim $(fzf);^M'
+bindkey -s '^v' 'vim $(fzf --border --reverse);^M'
 
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()

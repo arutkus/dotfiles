@@ -1,7 +1,3 @@
-updatesys() {
-    sh $DOTFILES/update.sh
-}
-
 extract() {
   if [ -f $1 ] ; then
     case $1 in
@@ -76,9 +72,13 @@ phpv() {
   valet install
 }
 
+function gdf {
+  git diff --color | diff-so-fancy | less
+}
+
 # fuzzy multi-select modified file
 gfmod() {
- git ls-files -m -o --exclude-standard | fzf --preview 'git diff {} {} | tail -n +6 | bat -ldiff --color "always"' -m
+  git ls-files -m -o --exclude-standard | fzf --preview 'git diff {} {} | tail -n +6 | bat -ldiff --color "always"' -m
 }
 
 # stage files multi-selected modified files
@@ -86,3 +86,19 @@ gfadd() {
  git add $(gfmod)
 }
 
+# git log browser with FZF
+fgl() {
+  git log --graph --color=always \
+      --format="%C(auto)%h%d %s %C(black)%C(bold)%cr" "$@" |
+  fzf --ansi --no-sort --reverse --tiebreak=index --bind=ctrl-s:toggle-sort \
+      --bind "ctrl-m:execute:
+                (grep -o '[a-f0-9]\{7\}' | head -1 |
+                xargs -I % sh -c 'git show --color=always % | less -R') << 'FZF-EOF'
+                {}
+FZF-EOF"
+}
+
+function fali() {
+  local foo=$(alias | fzf | sed "s/.*='\(.*\)'/\1/")
+  eval $foo
+}

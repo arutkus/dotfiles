@@ -14,7 +14,7 @@ else
     source $SCRIPT_PATH/scripts.zsh
 
     # fzf goodies
-    command -v "fzf" >/dev/null && source $SCRIPT_PATH/scripts_fzf.zsh
+    #command -v "fzf" >/dev/null
 fi
 
 # source startup scripts
