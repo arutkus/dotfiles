@@ -46,3 +46,10 @@ set hidden
 set tags+=./.git/tags;
 set path+=**
 set wildmenu
+
+set completeopt=menu,menuone,preview,noselect,noinsert
+
+" suppress the annoying 'match x of y', 'The only match' and 'Pattern not
+" found' messages
+set shortmess+=c
+

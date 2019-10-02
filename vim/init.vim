@@ -1,14 +1,8 @@
 call plug#begin('~/nvim/plugged')
 
-" $HOME/nvim/pluggedconf/vim-tmux-navigator.nvimrc
-Plug 'christoomey/vim-tmux-navigator'
-
 "--- Completion ---
 " $HOME/nvim/pluggedconf/deoplete.nvimrc
-Plug 'Shougo/deoplete.nvim'
-Plug 'roxma/nvim-yarp'                       " Deoplete dependency
-Plug 'roxma/vim-hug-neovim-rpc'              " Deoplete dependency
-Plug 'kristijanhusak/deoplete-phpactor'      " PHP Deoplete source
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 "--- Linting ---
 " $HOME/nvim/pluggedconf/ale.nvimrc
@@ -32,11 +26,8 @@ Plug 'vim-airline/vim-airline'
 Plug 'morhetz/gruvbox'
 Plug 'lifepillar/vim-gruvbox8'
 Plug 'sheerun/vim-polyglot'
-"Plug 'posva/vim-vue'
 
 "--- Organize/MD --
-Plug 'mhinz/vim-startify' "Startup screen
-Plug 'vimwiki/vimwiki'
 Plug 'SidOfc/mkdx', { 'for': 'markdown' } " lot of keystroke for markdown
 " $HOME/nvim/pluggedconf/goyo.nvimrc
 Plug 'junegunn/goyo.vim' " Distraction-free
@@ -77,19 +68,37 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-commentary'
 Plug 'jiangmiao/auto-pairs'
 
-"--- PHP ---
+"--- Dev helpers ---
 " $HOME/nvim/pluggedconf/vim-test.nvimrc
 Plug 'janko/vim-test' 
-" $HOME/nvim/pluggedconf/phpactor.nvimrc
-Plug 'phpactor/phpactor',
-  \ {'for': 'php', 'do': 'composer install'} " PHP refactoring and introspection
-" $HOME/nvim/pluggedconf/pdv.nvimrc
-Plug 'tobyS/pdv'                             " PHP docblocks
-Plug 'tobyS/vmustache'                       " PHP docblocks dependency
-" $HOME/nvim/pluggedconf/vim-php-manual.nvimrc
-Plug 'alvan/vim-php-manual'                  " PHP help
 " $HOME/nvim/pluggedconf/vdebug.nvimrc
 Plug 'vim-vdebug/vdebug'                     " Debugging
+" $HOME/nvim/pluggedconf/vim-tmux-navigator.nvimrc
+Plug 'christoomey/vim-tmux-navigator'
+
+"--- PHP ---
+" $HOME/nvim/pluggedconf/phpactor.nvimrc
+Plug 'phpactor/phpactor', {'for': 'php', 'do': 'composer install'} " PHP refactoring and introspection
+Plug 'kristijanhusak/deoplete-phpactor', {'for': 'php'}      " PHP Deoplete source
+" $HOME/nvim/pluggedconf/pdv.nvimrc
+Plug 'tobyS/pdv'                             " PHP docblocks
+Plug 'tobyS/vmustache', {'for': 'php'}       " PHP docblocks dependency
+" $HOME/nvim/pluggedconf/vim-php-manual.nvimrc
+Plug 'alvan/vim-php-manual', {'for': 'php'}  " PHP help
+
+"--- Javascript ---
+" $HOME/nvim/pluggedconf/ternjs.nvimrc
+Plug 'ternjs/tern_for_vim', { 'for': 'javascript', 'do': 'npm install && npm install -g tern' }
+Plug 'carlitux/deoplete-ternjs', { 'for': 'javascript', 'do': 'npm install -g tern' }
+
+"--- Python ---
+" $HOME/nvim/pluggedconf/jedi.nvimrc
+Plug 'davidhalter/jedi-vim', { 'for': 'python' }
+Plug 'zchee/deoplete-jedi', { 'for': 'python' }
+
+"--- Go ---
+Plug 'fatih/vim-go', { 'for': 'go' }
+Plug 'zchee/deoplete-go', { 'for': 'go', 'do': 'make'}
 
 call plug#end()
 

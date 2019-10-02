@@ -9,3 +9,7 @@ nmap <Leader>rv :w<CR>:TestVisit<CR>
 
 let test#strategy = "neovim"
 let test#neovim#term_position = "vertical botright"
+
+if has('nvim')
+  tmap <C-o> <C-\><C-n>
+endif
