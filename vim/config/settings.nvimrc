@@ -7,14 +7,22 @@ endif
 filetype plugin indent on
 
 "general settings
-set clipboard=unnamedplus
-set noswapfile
+set clipboard^=unnamed
+set clipboard^=unnamedplus
+set noswapfile               " Don't use swapfile
+set nobackup                 " Don't create annoying backup files
+set splitright               " Split vertical windows right to the current windows
+set splitbelow               " Split horizontal windows below to the current windows
+set autowrite                " Automatically save before :next, :make etc.
+
 set nohlsearch            " Don't continue to highlight searched phrases.
 set incsearch             " But do highlight as you type your search.
-set ignorecase            " Make searches case-insensitive.
-set showmatch             " Matching brace
+set noshowmatch              " Do not show matching brackets by flickering
+set noshowmode               " We show the mode with airline or lightline
+set ignorecase               " Search case insensitive...
+set smartcase                " ... but not it begins with upper case 
 set visualbell            " Flash instead of bell
-
+"
 "appearance settings
 syntax enable
 set background=dark
