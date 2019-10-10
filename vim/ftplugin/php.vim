@@ -1,7 +1,7 @@
 " Declare the general config group for autocommand
 augroup php
   autocmd!
-    autocmd FileType php setlocal omnifunc=phpactor#Complete
+    " autocmd FileType php setlocal omnifunc=phpactor#Complete
     autocmd FileType php setlocal listchars=tab:+\ ,eol:-
     autocmd FileType php setlocal formatprg=par\ -w80\ -T4
 augroup END

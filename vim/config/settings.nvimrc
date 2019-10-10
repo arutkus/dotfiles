@@ -22,14 +22,10 @@ set noshowmode               " We show the mode with airline or lightline
 set ignorecase               " Search case insensitive...
 set smartcase                " ... but not it begins with upper case 
 set visualbell            " Flash instead of bell
-"
-"appearance settings
-syntax enable
-set background=dark
+
 colorscheme gruvbox8_hard
 
-set t_cO=256
-set relativenumber number
+set number
 set cursorline            " highlight current line
 set hlsearch              " highlight all searched
 set incsearch             " highlight as you search

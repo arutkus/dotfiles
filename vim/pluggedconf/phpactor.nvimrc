@@ -1,7 +1,9 @@
 " Php intelligence
 " Plugin: phpactor
 
-let g:phpactorBranch = 'develop'
+let g:phpactorBranch = 'master'
+let g:phpactorOmniAutoClassImport = v:true
+let g:phpactorPhpBin = 'php'
 
 autocmd FileType php nnoremap <buffer> <Leader>i :call phpactor#ContextMenu()<CR>
 autocmd FileType php nnoremap <buffer> <Leader>d :call phpactor#FindReferences()<CR>
