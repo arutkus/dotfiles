@@ -133,8 +133,12 @@ hs.hotkey.bind(hyper, '8' , function()
     toogleApp('Spotify')
 end)
 
-hs.hotkey.bind(hyper, '4' , function()
+hs.hotkey.bind(hyper, '6' , function()
     toogleApp('Jira')
+end)
+
+hs.hotkey.bind(hyper, '5' , function()
+    toogleApp('Notes')
 end)
 
 hs.hotkey.bind(hyper, '4' , function()
