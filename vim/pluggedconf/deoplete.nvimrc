@@ -17,7 +17,3 @@ let g:deoplete#sources.php = ['phpactor', 'buffer', 'tag', 'file']
 let g:deoplete#file#enable_buffer_path = 1
 
 call deoplete#custom#source('_', 'max_menu_width', 220)
-
-" deoplete tab-complete
-inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<TAB>"

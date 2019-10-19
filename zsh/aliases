@@ -90,6 +90,7 @@ alias ffinish='feature finish'
 #################
 
 alias a='php artisan'
+alias at='a tinker'
 alias acleanup='a clear-compiled && a cache:clear && a route:clear && a view:clear && a config:clear'
 alias ide-models="a ide-helper:models -N"
 

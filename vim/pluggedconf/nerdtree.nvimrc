@@ -22,8 +22,3 @@ let NERDTreeMapPreviewVSplit='gv'
 let g:NERDTreeMouseMode=3
 
 let NERDTreeShowHidden=1
-
-" File system browser
-" Plugin: nerdtree
-nmap <Leader><Tab> :NERDTreeToggle<CR>
-nmap <Leader><Leader><Tab> :NERDTreeFind<CR>zz

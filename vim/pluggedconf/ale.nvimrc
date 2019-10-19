@@ -1,9 +1,3 @@
-" Ale
-" Plugin: ale
-"
-nnoremap <Leader><Leader>a :ALEToggle<CR>
-nnoremap <Leader>if :ALEFix<CR>
-
 let g:ale_sign_error = '!'
 let g:ale_sign_style_error = '!'
 let g:ale_sign_warning = '!'

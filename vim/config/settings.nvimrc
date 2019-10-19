@@ -24,6 +24,8 @@ set smartcase                " ... but not it begins with upper case
 set visualbell            " Flash instead of bell
 
 colorscheme gruvbox8_hard
+set lazyredraw
+hi Normal ctermbg=NONE guibg=NONE
 
 set number
 set cursorline            " highlight current line
@@ -56,4 +58,3 @@ set completeopt=menu,menuone,preview,noselect,noinsert
 " suppress the annoying 'match x of y', 'The only match' and 'Pattern not
 " found' messages
 set shortmess+=c
-
