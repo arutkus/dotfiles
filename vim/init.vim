@@ -97,3 +97,7 @@ source $HOME/nvim/config/mappings/plugs.nvimrc
 for file in split(glob("~/nvim/pluggedconf/*.nvimrc"), '\n')
     exe 'source' file
 endfor
+
+"let NVIM_TUI_ENABLE_CURSOR_SHAPE = 0
+
+au VimLeave * set guicursor=a:ver100-blinkon0

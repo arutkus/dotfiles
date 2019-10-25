@@ -8,9 +8,9 @@ alias vim='nvim'
 alias vi='vim'
 #alias cat='bat'
 alias mux='tmuxinator'
+alias xx='tmux'
 alias cgr='composer global require'
 alias t='todo.sh'
-alias grf='~/go/bin/gf'
 
 alias cp='cp -iv'
 alias mv='mv -iv'
@@ -31,6 +31,7 @@ alias eali='nvim ~/dotfiles/zsh/aliases && sz'
 ##################
 
 alias wg='cd ~/sites/whatagraph && la'
+alias api='cd ~/sites/whatagraph-api && la'
 alias sites='cd ~/sites && la'
 alias crm='cd ~/sites/crm && la'
 alias dot='cd ~/dotfiles && la && status'

@@ -19,10 +19,11 @@ prompt_context () { }
 # Search with fzf and open selected file with Vim
 bindkey -s '^v' 'vim $(fzf --border --reverse --preview "bat --color=always {}");^M'
 
+POWERLEVEL9K_IGNORE_TERM_COLORS=true
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
 
-if [ -z "$TMUX" ]
-then
-  tmux attach -t stormis || mux start jrnl 
-fi
+# if [ -z "$TMUX" ]
+# then
+#   tmux attach -t stormis || mux start jrnl 
+# fi

@@ -4,29 +4,9 @@ name: stormis
 root: ~/
 
 windows:
-  - WG-APP:
+  - WG:
       panes:
-        - cd ~/sites/whatagraph/ && status
-  - WG-TOOLS:
-      layout: even-horizontal
-      panes:
-        - cd ~/sites/whatagraph-tools/ && status
-        - cd ~/sites/whatagraph-tools/storage/logs && tail -100 laravel.log
-  - SQL:
-      panes:
-        - cd ~/Queriee/wg_sql && la
+        - cd ~/sites && la
   - API:
       panes:
         - cd ~/Queriee/wg_api && la
-  - jrnl|todo:
-      layout: even-horizontal
-      panes:
-        - cd ~/Dropbox/Apps/jrnl && jrnl -n 10
-        - cd ~/Dropbox/Apps/todo && t ls
-
-          # - vuepress: 
-          # layout: 17c2,204x69,0,0{102x69,0,0[102x59,0,0,0,102x9,0,60,4],101x69,103,0,3}
-          # panes:
-          # - cd ~/sites/stormdocs/docs/.vuepress && vim config.js 
-          # - cd ~/sites/stormdocs && npm run docs:dev
-          # - cd ~/sites/stormdocs/docs && la
