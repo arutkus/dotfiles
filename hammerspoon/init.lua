@@ -154,7 +154,7 @@ hs.hotkey.bind(hyper, '2' , function()
 end)
 
 hs.hotkey.bind(hyper, '1' , function()
-    toogleApp('Sequel Pro Nightly')
+    toogleApp('Querious')
 end)
 
 function toogleApp(_app) 
