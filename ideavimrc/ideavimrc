@@ -44,4 +44,4 @@ nnoremap ]d :action QuickImplementations<cr>
 nnoremap ]e :action GotoNextError<cr>
 nnoremap [e :action GotoPreviousError<cr>
 
-"nnoremap <leader>gq :action ReformatCode<cr>
+nnoremap <space> zz

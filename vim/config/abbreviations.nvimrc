@@ -1,1 +1,1 @@
-iabbrev DBB DB g:localdb
+iabbrev wo $this->withoutExceptionHandling();

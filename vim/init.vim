@@ -8,9 +8,6 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 " $HOME/nvim/pluggedconf/ale.nvimrc
 Plug 'w0rp/ale'
 
-"-- SQL queries -- yy then :@"
-Plug 'tpope/vim-dadbod'
-
 "-- Sum line(s)  - <lea>?=
 "-- Sum one col  - <lea><lea>?s
 "-- Sum line col - <lea>?=s
