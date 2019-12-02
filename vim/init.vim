@@ -13,6 +13,11 @@ Plug 'w0rp/ale'
 "-- Sum line col - <lea>?=s
 Plug 'sk1418/HowMuch'
 
+"--- Snippets ---
+" $HOME/nvim/pluggedconf/ultisnips.nvimrc
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+
 "--- To run API query under cursor <lea><cr>
 Plug 'baverman/vial', {'for': 'vial-http'}
 Plug 'baverman/vial-http', {'for': 'vial-http'}

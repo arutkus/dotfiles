@@ -12,7 +12,7 @@ let g:deoplete#delimiters = ['/', '.', '::', ':', '#', '->']
 
 let g:deoplete#sources = {}
 let g:deoplete#sources.python = ['jedi']
-let g:deoplete#sources.php = ['phpactor', 'buffer', 'tag', 'file']
+let g:deoplete#sources.php = ['phpactor', 'ultisnips', 'buffer', 'tag', 'file']
 
 let g:deoplete#file#enable_buffer_path = 1
 
