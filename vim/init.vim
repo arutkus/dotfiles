@@ -30,9 +30,9 @@ Plug 'sheerun/vim-polyglot'
 Plug 'itchyny/lightline.vim'
 
 "--- Organize/MD --
-Plug 'junegunn/goyo.vim', {'for': 'markdown'} " Distraction-free
+Plug 'junegunn/goyo.vim', {'for': 'text'} " Distraction-free
 " $HOME/nvim/pluggedconf/limelight.nvimrc
-Plug 'junegunn/limelight.vim', {'for': 'markdown'} " Hyperfocus-writing
+Plug 'junegunn/limelight.vim', {'for': 'text'} " Hyperfocus-writing
 
 "--- GIT ---
 Plug 'tpope/vim-fugitive'

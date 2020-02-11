@@ -11,35 +11,29 @@ let mapleader='-'
 
 nnoremap <Esc> :nohlsearch<CR>
 
-inoremap <c-j> <c-r>0<ESC>
-" VimMotionJump{Next,Previous}
-nnoremap <c-p> <c-i>
-nnoremap <c-[> <c-t>
 nnoremap <tab> <c-w>w
+nnoremap <c-h> <c-w><c-h>
+nnoremap <c-l> <c-w><c-l>
+nnoremap <c-j> <c-w><c-j>
+nnoremap <c-k> <c-w><c-k>
 
 nnoremap Y y$
 nnoremap Q @q
 
+nnoremap <leader>i :action QuickImplementations<cr>
+nnoremap <leader>I :action GotoImplementation<cr>
+
+nnoremap <leader>u :action FindUsages<cr>
+nnoremap <leader>U :action ShowUsages<cr>
+
+nnoremap <leader>l :action OptimizeImports<cr>
+nnoremap <leader>B :action Annotate<cr>
+
 nnoremap <leader>gq :action Vcs.QuickListPopupAction<CR>
 nnoremap <leader>gw :action GotoDeclaration<cr>
-nnoremap <leader>ge :action GotoSuperMethod<cr>
-nnoremap <leader>gr :action GotoRelated<cr>
-nnoremap <leader>gt :action GotoTest<cr>
-nnoremap <leader>gy :action ShowUsages<cr>
-nnoremap <leader>gu :action FindUsages<cr>
-nnoremap <leader>gi :action GotoImplementation<cr>
-nnoremap <leader>go :action OptimizeImports<cr>
-nnoremap <leader>gp :action Annotate<cr>
 
-nnoremap <leader>ga :action GotoAction<cr>
 nnoremap <leader>re :action RenameElement<cr>
 nnoremap <leader>rf :action RenameFile<cr>
-
-nmap [c :action VcsShowPrevChangeMarker<cr>
-nmap ]c :action VcsShowNextChangeMarker<cr>
-
-nnoremap [d :action QuickImplementations<cr>
-nnoremap ]d :action QuickImplementations<cr>
 
 nnoremap ]e :action GotoNextError<cr>
 nnoremap [e :action GotoPreviousError<cr>

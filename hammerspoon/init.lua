@@ -134,11 +134,11 @@ hs.hotkey.bind(hyper, '8' , function()
 end)
 
 hs.hotkey.bind(hyper, '6' , function()
-    toogleApp('Jira')
+    toogleApp('Notes')
 end)
 
 hs.hotkey.bind(hyper, '5' , function()
-    toogleApp('Notes')
+    toogleApp('Tinkerwell')
 end)
 
 hs.hotkey.bind(hyper, '4' , function()
@@ -154,7 +154,7 @@ hs.hotkey.bind(hyper, '2' , function()
 end)
 
 hs.hotkey.bind(hyper, '1' , function()
-    toogleApp('Querious')
+    toogleApp('TablePlus')
 end)
 
 function toogleApp(_app) 
