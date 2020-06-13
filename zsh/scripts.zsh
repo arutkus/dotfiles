@@ -43,13 +43,13 @@ matrix () {
         letter=substr(letters,c,1)
         cols[random_col]=0;
         for (col in cols) {
-        line=cols[col];
-        cols[col]=cols[col]+1;
-        printf "\033[%s;%sH\033[2;32m%s", line, col, letter;
-        printf "\033[%s;%sH\033[1;37m%s\033[0;0H", cols[col], col, letter;
-        if (cols[col] >= lines) {
-            cols[col]=0;
-        }
+          line=cols[col];
+          cols[col]=cols[col]+1;
+          printf "\033[%s;%sH\033[2;32m%s", line, col, letter;
+          printf "\033[%s;%sH\033[1;37m%s\033[0;0H", cols[col], col, letter;
+          if (cols[col] >= lines) {
+              cols[col]=0;
+          }
         }
     }
     '
@@ -73,7 +73,7 @@ phpv() {
 }
 
 function gdf {
-  git diff --color | diff-so-fancy | less
+  git diff --color | diff-so-fancy | less -r
 }
 
 # fuzzy multi-select modified file
@@ -102,3 +102,10 @@ function fali() {
   local foo=$(alias | fzf | sed "s/.*='\(.*\)'/\1/")
   eval $foo
 }
+
+# Search with fzf and open selected file with Vim
+fe() (
+  IFS=$'\n' files=($(fzf --multi --select-1 --exit-0 --border --reverse --preview "bat --color=always {}"))
+  [[ -n "$files" ]] && ${EDITOR:-vim} "${files[@]}"
+)
+

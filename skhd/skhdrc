@@ -18,9 +18,9 @@ alt - 6 : yabai -m space --focus 6
 alt - 7 : yabai -m space --focus 7
 alt - 8 : yabai -m space --focus 8
 # Cycle
-alt - x : yabai -m space --focus recent
-alt - z : yabai -m space --focus prev
-alt - c : yabai -m space --focus next
+#alt - \\ : yabai -m space --focus recent
+#alt - \; : yabai -m space --focus prev
+#alt - \' : yabai -m space --focus next
 
 # Monitors: Ctrl + Alt + [NUM]
 #ctrl + alt - 1  : yabai -m display --focus 1

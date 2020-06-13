@@ -1,4 +1,4 @@
-let g:limelight_conceal_ctermfg = 'DarkGray'
+let g:limelight_conceal_ctermfg = 'DarkGrey'
 
-autocmd! User GoyoEnter Limelight
-autocmd! User GoyoLeave Limelight!
+"autocmd! User GoyoEnter Limelight
+"autocmd! User GoyoLeave Limelight!

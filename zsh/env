@@ -2,12 +2,13 @@
 # EXPORT ENVIRONMENT VARIABLE #
 ###############################
 
-export FZF_DEFAULT_COMMAND='ag --nocolor -g ""'
-export FZF_CTRL_T_COMMAND=$FZF_DEFAULT_COMMAND
-export FZF_ALT_C_COMMAND="$FZF_DEFAULT_COMMAND"
-export FZF_DEFAULT_OPTS='--color fg:-1,bg:-1,hl:230,fg+:3,bg+:233,hl+:229 --color info:150,prompt:110,spinner:150,pointer:167,marker:174'
+export FZF_DEFAULT_COMMAND='fd --type file --color auto'
+export FZF_CTRL_T_COMMAND='fd --no-ignore-vcs --hidden --type file --color auto'
+export FZF_ALT_C_COMMAND="fd -t d . $HOME"
 
-export KEYTIMEOUT=1
+#export FZF_DEFAULT_OPTS='--color fg:-1,bg:-1,hl:230,fg+:3,bg+:233,hl+:229 --color info:150,prompt:110,spinner:150,pointer:167,marker:174'
+
+#export KEYTIMEOUT=1000
 
 # Useful for the install scripts
 export DOTFILES="$HOME/dotfiles"
@@ -17,6 +18,7 @@ export GIT_EDITOR="nvim"
 export VISUAL="nvim"
 
 export HISTSIZE=10000
+export SAVEHIST=10000
 export XDG_CONFIG_HOME=$HOME
 #export TERM='xterm-256color'
 #export TERM='screen-256color'
@@ -24,5 +26,7 @@ export COMPOSER_HOME="$HOME/.composer"
 export ANSIBLE_HOSTS="$HOME/ansible/hosts"
 
 export LC_ALL=en_US.UTF-8
+
+export GIT_PROMPT_EXECUTABLE="haskell"
 
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/opt/fzf/bin:/Users/stormis/Queriee/bash:/Users/stormis/go/bin"

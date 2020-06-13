@@ -1,5 +1,12 @@
 alias sz='source ~/.zshrc'
 
+alias l='exa -la'
+alias ls='exa'
+alias la='exa -la --git'
+alias ll='exa -la --git --tree'
+alias ..='cd ..'
+alias ...='cd ../..'
+
 ################
 ### MAPPINGS ###
 ################
@@ -40,6 +47,7 @@ alias docs='cd ~/sites/stormdocs/docs && la'
 alias vi='cd ~/nvim && la'
 alias drop='cd ~/Dropbox/Apps/ && la'
 alias tools='cd ~/sites/whatagraph-tools && la'
+alias wi='cd ~/vimwiki && la'
 
 ###########
 ### GIT ###

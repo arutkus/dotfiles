@@ -27,3 +27,4 @@ imap <c-x><c-l> <plug>(fzf-complete-line)
 " Quickly append semicolon or comma
 imap ;; <Esc>A;<Esc>
 imap ,, <Esc>A,<Esc>
+

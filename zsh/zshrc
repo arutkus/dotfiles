@@ -1,29 +1,49 @@
-export ZSH=/Users/stormis/.oh-my-zsh
+#. /usr/local/etc/profile.d/z.sh
+. `brew --prefix`/etc/profile.d/z.sh
+source $HOME/Gits/zsh-git-prompt/zshrc.sh
 
-. /usr/local/etc/profile.d/z.sh
+source $HOME/dotfiles/zsh/env
+source $HOME/dotfiles/zsh/aliases
+source $HOME/dotfiles/zsh/scripts.zsh
 
-ZSH_THEME="powerlevel10k/powerlevel10k"
+setopt sharehistory
+setopt extendedhistory
+setopt HIST_IGNORE_DUPS
+setopt PROMPT_SUBST
+setopt autocd
 
-source $ZSH/oh-my-zsh.sh
-source ${ZDOTDIR:-$HOME}/dotfiles/zsh/startup
+PROMPT=' %B%F{119}%1~ >_%f%b '
+RPROMPT='$(git_super_status)'
+ZSH_THEME_GIT_PROMPT_BRANCH="%{$fg_bold[green]%}"
 
-plugins=(
-  git git-flow history per-directory-history colored-man-pages colorize extract laravel brew osx docker tmux tmuxinator
-)
+#autoload -Uz vcs_info
+#precmd_vcs_info() { vcs_info }
+#precmd_functions+=( precmd_vcs_info )
+#RPROMPT=\$vcs_info_msg_0_
+#zstyle ':vcs_info:git:*' formats '%F{113}%b'
+#zstyle ':vcs_info:*' enable git
 
 DEFAULT_USER=whoami``
-prompt_context () { }
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# Search with fzf and open selected file with Vim
-bindkey -s '^v' 'vim $(fzf --border --reverse --preview "bat --color=always {}");^M'
-
-POWERLEVEL9K_IGNORE_TERM_COLORS=true
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
 
 # if [ -z "$TMUX" ]
 # then
 #   tmux attach -t stormis || mux start jrnl 
 # fi
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+bindkey -s '^f' 'fe^M'
+
+autoload edit-command-line; zle -N edit-command-line
+bindkey -M vicmd v edit-command-line
+
+bindkey "ç" fzf-cd-widget
+
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/stormis/Playground/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/stormis/Playground/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/stormis/Playground/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/stormis/Playground/google-cloud-sdk/completion.zsh.inc'; fi

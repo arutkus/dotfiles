@@ -24,10 +24,10 @@ set smartcase                " ... but not it begins with upper case
 set visualbell            " Flash instead of bell
 
 colorscheme gruvbox8_hard
-set lazyredraw
-hi Normal ctermbg=NONE guibg=NONE
+set nolazyredraw
+"hi Normal ctermbg=NONE guibg=NONE
 
-set number
+set nonumber
 set cursorline            " highlight current line
 set hlsearch              " highlight all searched
 set incsearch             " highlight as you search
@@ -55,6 +55,11 @@ set wildmenu
 
 set completeopt=menu,menuone,preview,noselect,noinsert
 
-" suppress the annoying 'match x of y', 'The only match' and 'Pattern not
-" found' messages
 set shortmess+=c
+set cmdheight=1
+set updatetime=300
+set signcolumn=no
+
+set ttyfast
+
+"au VimLeave * set guicursor=a:ver100-blinkon0

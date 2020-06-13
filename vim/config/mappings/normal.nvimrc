@@ -53,9 +53,8 @@ nnoremap n nzz
 nnoremap N Nzz
 
 " Same when moving up and down
-noremap <C-d> <C-d>zz
-noremap <C-u> <C-u>zz
-map <C-f> :echo expand("%:p")<cr>
+"noremap <C-d> <C-d>zz
+"noremap <C-u> <C-u>zz
 
 " Remap H and L (top, bottom of screen to left and right end of line)
 nnoremap H ^

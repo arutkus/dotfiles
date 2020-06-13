@@ -1,87 +1,54 @@
 call plug#begin('~/nvim/plugged')
 
-"--- Completion ---
-" $HOME/nvim/pluggedconf/deoplete.nvimrc
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-
-"--- Linting ---
-" $HOME/nvim/pluggedconf/ale.nvimrc
-Plug 'w0rp/ale'
-
-"-- Sum line(s)  - <lea>?=
-"-- Sum one col  - <lea><lea>?s
-"-- Sum line col - <lea>?=s
-Plug 'sk1418/HowMuch'
+Plug 'neoclide/coc.nvim', {'branch': 'release'} " $HOME/nvim/pluggedconf/coc.nvimrc
 
 "--- Snippets ---
-" $HOME/nvim/pluggedconf/ultisnips.nvimrc
-Plug 'SirVer/ultisnips'
+Plug 'SirVer/ultisnips' " $HOME/nvim/pluggedconf/ultisnips.nvimrc
 Plug 'honza/vim-snippets'
-
-"--- To run API query under cursor <lea><cr>
-Plug 'baverman/vial', {'for': 'vial-http'}
-Plug 'baverman/vial-http', {'for': 'vial-http'}
 
 "--- Appearance ---
 Plug 'lifepillar/vim-gruvbox8'
 Plug 'sheerun/vim-polyglot'
-"
-" $HOME/nvim/pluggedconf/lightline.nvimrc
-Plug 'itchyny/lightline.vim'
+Plug 'itchyny/lightline.vim' " $HOME/nvim/pluggedconf/lightline.nvimrc
 
 "--- Organize/MD --
-Plug 'junegunn/goyo.vim', {'for': 'text'} " Distraction-free
-" $HOME/nvim/pluggedconf/limelight.nvimrc
-Plug 'junegunn/limelight.vim', {'for': 'text'} " Hyperfocus-writing
+Plug 'junegunn/goyo.vim', " $HOME/nvim/pluggedconf/goyo.nvimrc
+Plug 'junegunn/limelight.vim', " $HOME/nvim/pluggedconf/limelight.nvimrc
+Plug 'vimwiki/vimwiki' " $HOME/nvim/pluggedconf/vimwiki.nvimrc
+
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
 
 "--- GIT ---
 Plug 'tpope/vim-fugitive'
 
-"--- Togglers ---
-" $HOME/nvim/pluggedconf/nerdtree.nvimrc
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' } 
-
 "--- Search tools ---
 Plug '/usr/local/opt/fzf'
-" $HOME/nvim/pluggedconf/fzf.nvimrc
-Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf.vim' " $HOME/nvim/pluggedconf/fzf.nvimrc
 Plug 'mileszs/ack.vim'
 Plug 'jremmen/vim-ripgrep'
 
 "--- Text edit ---
-Plug 'machakann/vim-highlightedyank'      " Highlight briefly every yank text
-Plug 'tpope/vim-surround'                 " Surround with whatever cs, ds, yss
+Plug 'machakann/vim-highlightedyank'
+Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
-" $HOME/nvim/pluggedconf/vim-commentary.nvimrc
-Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-commentary' " $HOME/nvim/pluggedconf/vim-commentary.nvimrc
 Plug 'jiangmiao/auto-pairs'
 
 "--- Dev helpers ---
-" $HOME/nvim/pluggedconf/vim-test.nvimrc
-Plug 'janko/vim-test', {'for': 'php'}
-" $HOME/nvim/pluggedconf/vdebug.nvimrc
-Plug 'vim-vdebug/vdebug', {'for': 'php'}
-" $HOME/nvim/pluggedconf/vim-tmux-navigator.nvimrc
-Plug 'christoomey/vim-tmux-navigator'
-
-"--- PHP ---
-" $HOME/nvim/pluggedconf/phpactor.nvimrc
-Plug 'phpactor/phpactor', {'for': 'php', 'do':'composer install'} " PHP refactoring and introspection
-Plug 'kristijanhusak/deoplete-phpactor', {'for': 'php'}      " PHP Deoplete source
-" $HOME/nvim/pluggedconf/pdv.nvimrc
-Plug 'tobyS/pdv', {'for': 'php'}                             " PHP docblocks
-Plug 'tobyS/vmustache', {'for': 'php'}       " PHP docblocks dependency
-" $HOME/nvim/pluggedconf/vim-php-manual.nvimrc
-Plug 'alvan/vim-php-manual', {'for': 'php'}  " PHP help
+Plug 'janko/vim-test', {'for': 'php'} " $HOME/nvim/pluggedconf/vim-test.nvimrc
+Plug 'christoomey/vim-tmux-navigator' " $HOME/nvim/pluggedconf/vim-tmux-navigator.nvimrc
+"
+"--- Miscellaneous
+Plug 'baverman/vial', {'for': 'vial-http'} " <leader><cr>
+Plug 'baverman/vial-http', {'for': 'vial-http'}
+Plug 'voldikss/vim-floaterm' " $HOME/nvim/pluggedconf/vim-floaterm.nvimrc
 
 "--- Python ---
-" $HOME/nvim/pluggedconf/jedi.nvimrc
-Plug 'davidhalter/jedi-vim', { 'for': 'python' }
-Plug 'zchee/deoplete-jedi', { 'for': 'python' }
+"Plug 'davidhalter/jedi-vim', { 'for': 'python' } "$HOME/nvim/pluggedconf/jedi.nvimrc
 
 "--- Go ---
-Plug 'fatih/vim-go', { 'for': 'go' }
-Plug 'zchee/deoplete-go', { 'for': 'go'}
+"Plug 'fatih/vim-go', { 'for': 'go' }
 
 call plug#end()
 
@@ -99,7 +66,3 @@ source $HOME/nvim/config/mappings/plugs.nvimrc
 for file in split(glob("~/nvim/pluggedconf/*.nvimrc"), '\n')
     exe 'source' file
 endfor
-
-"let NVIM_TUI_ENABLE_CURSOR_SHAPE = 0
-
-au VimLeave * set guicursor=a:ver100-blinkon0
