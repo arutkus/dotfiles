@@ -1,1 +1,0 @@
-iabbrev wo $this->withoutExceptionHandling();

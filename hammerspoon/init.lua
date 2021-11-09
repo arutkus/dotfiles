@@ -118,7 +118,7 @@ end)
 
 -- Toogle the App between hide and show
 hs.hotkey.bind(hyper, 'return' , function() 
-    toogleApp('Alacritty') 
+    toogleApp('Kitty') 
 end)
 
 hs.hotkey.bind(hyper, '0' , function()

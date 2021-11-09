@@ -1,0 +1,45 @@
+call plug#begin('~/.config/vim/plugged')
+
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+"--- Appearance ---
+Plug 'lifepillar/vim-gruvbox8'
+Plug 'sheerun/vim-polyglot'
+Plug 'itchyny/lightline.vim'
+Plug 'mengelbrecht/lightline-bufferline'
+
+"--- Zen mode --
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
+
+"--- Search tools ---
+Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf.vim'
+"Plug 'jremmen/vim-ripgrep'
+
+"--- Text edit ---
+Plug 'machakann/vim-highlightedyank'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
+Plug 'jiangmiao/auto-pairs'
+
+"--- Miscellaneous
+Plug 'baverman/vial',
+Plug 'baverman/vial-http',
+Plug 'dhleong/vim-wildwildws', {'do': 'npm i -g wildwildws-d'}
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'justinmk/vim-sneak'
+
+Plug 'voldikss/vim-floaterm'
+Plug 'lambdalisue/fern.vim'
+Plug 'LumaKernel/fern-mapping-fzf.vim'
+
+call plug#end()
+
+source $HOME/.config/vim/config/settings.nvimrc
+source $HOME/.config/vim/config/variables.nvimrc
+source $HOME/.config/vim/config/commands.nvimrc
+
+source $HOME/.config/vim/config/mappings/insert.nvimrc
+source $HOME/.config/vim/config/mappings/visual.nvimrc
+source $HOME/.config/vim/config/mappings/normal.nvimrc

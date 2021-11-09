@@ -11,13 +11,13 @@ alias ...='cd ../..'
 ### MAPPINGS ###
 ################
 
-alias vim='nvim'
-alias vi='vim'
+alias ip='curl ifconfig.co'
+
 #alias cat='bat'
-alias mux='tmuxinator'
+#alias mux='tmuxinator'
 alias xx='tmux'
 alias cgr='composer global require'
-alias t='todo.sh'
+alias t='todo.sh -d ~/.config/todo/.todo.cfg'
 
 alias cp='cp -iv'
 alias mv='mv -iv'
@@ -29,25 +29,17 @@ alias :q='exit'
 ### EDIT FILES ###
 ##################
 
-alias evim='nvim ~/nvim/init.vim'
-alias ezsh='nvim ~/.zshrc'
-alias eali='nvim ~/dotfiles/zsh/aliases && sz'
+alias evim='vim ~/.vimrc'
+alias ezsh='vim ~/.zshrc'
+alias eali='vim ~/dotfiles/zsh/aliases && sz'
 
 ##################
 ### NAVIGATION ###
 ##################
 
-alias wg='cd ~/sites/whatagraph && la'
-alias api='cd ~/sites/whatagraph-api && la'
-alias sites='cd ~/sites && la'
-alias crm='cd ~/sites/crm && la'
 alias dot='cd ~/dotfiles && la && status'
-alias dock='cd ~/Documents/docker/yno-img && la'
-alias docs='cd ~/sites/stormdocs/docs && la'
-alias vi='cd ~/nvim && la'
+alias vi='vim'
 alias drop='cd ~/Dropbox/Apps/ && la'
-alias tools='cd ~/sites/whatagraph-tools && la'
-alias wi='cd ~/vimwiki && la'
 
 ###########
 ### GIT ###
@@ -98,10 +90,10 @@ alias ffinish='feature finish'
 ###  LARAVEL  ###
 #################
 
-alias a='php artisan'
-alias at='a tinker'
-alias acleanup='a clear-compiled && a cache:clear && a route:clear && a view:clear && a config:clear'
-alias ide-models="a ide-helper:models -N"
+#alias a='php artisan'
+#alias at='a tinker'
+#alias acleanup='a clear-compiled && a cache:clear && a route:clear && a view:clear && a config:clear'
+#alias ide-models="a ide-helper:models -N"
 
 #################
 ### DEV-COMBO ###
@@ -126,4 +118,5 @@ alias preview="fzf --preview 'bat --color \"always\" {}'"
 alias tt="vendor/bin/phpunit"
 alias php71="phpv php@7.1"
 alias php72="phpv php@7.2"
-alias php73="phpv php"
+alias php73="phpv php@7.3"
+alias php74="phpv php@7.4"

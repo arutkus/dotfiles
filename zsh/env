@@ -13,20 +13,28 @@ export FZF_ALT_C_COMMAND="fd -t d . $HOME"
 # Useful for the install scripts
 export DOTFILES="$HOME/dotfiles"
 
-export EDITOR="nvim"
-export GIT_EDITOR="nvim"
-export VISUAL="nvim"
+export EDITOR="vim"
+export GIT_EDITOR="vim"
+export VISUAL="vim"
 
-export HISTSIZE=10000
 export SAVEHIST=10000
 export XDG_CONFIG_HOME=$HOME
 #export TERM='xterm-256color'
-#export TERM='screen-256color'
+export TERM='screen-256color'
 export COMPOSER_HOME="$HOME/.composer"
 export ANSIBLE_HOSTS="$HOME/ansible/hosts"
 
 export LC_ALL=en_US.UTF-8
 
-export GIT_PROMPT_EXECUTABLE="haskell"
+#export GIT_PROMPT_EXECUTABLE="haskell"
+
+export _Z_DATA="/Users/stormis/logs/z/.z"
+
+export ZDOTDIR="/Users/stormis/.config/zsh"
+export HISTFILE="/Users/stormis/.config/zsh/.zsh_history"
+export HISTSIZE=10000
+
+export REDISCLI_HISTFILE="/Users/stormis/logs/redis-cli/rediscli_history"
+export LESSHISTFILE="/Users/stormis/logs/less/lesshst"
 
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/opt/fzf/bin:/Users/stormis/Queriee/bash:/Users/stormis/go/bin"

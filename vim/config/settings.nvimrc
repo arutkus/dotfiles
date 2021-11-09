@@ -1,9 +1,6 @@
-
 "---- SETTINGS -----
-
-if &compatible
-  set nocompatible
-endif
+syntax enable
+set nocompatible
 filetype plugin indent on
 
 "general settings
@@ -23,10 +20,14 @@ set ignorecase               " Search case insensitive...
 set smartcase                " ... but not it begins with upper case 
 set visualbell            " Flash instead of bell
 
+set background=dark
+
 colorscheme gruvbox8_hard
 set nolazyredraw
-"hi Normal ctermbg=NONE guibg=NONE
+hi Normal ctermbg=NONE guibg=NONE
 
+set formatoptions-=cro    " Stop newline continution of comments
+set showtabline=2         " always show tabs"
 set nonumber
 set cursorline            " highlight current line
 set hlsearch              " highlight all searched
@@ -61,5 +62,6 @@ set updatetime=300
 set signcolumn=no
 
 set ttyfast
+set re=0
+set viminfo+=n~/logs/vim/viminfo
 
-"au VimLeave * set guicursor=a:ver100-blinkon0

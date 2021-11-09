@@ -1,11 +1,14 @@
 set surround
+set highlightedyank
 
-set relativenumber number
+set number
 set incsearch hlsearch
 set ignorecase smartcase
 set clipboard+=unnamed
 set scrolloff=15
 set showmode
+
+let g:highlightedyank_highlight_color = "rgba(118, 246, 33, 0.73)"
 
 let mapleader='-'
 
