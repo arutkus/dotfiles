@@ -26,15 +26,13 @@ export ANSIBLE_HOSTS="$HOME/ansible/hosts"
 
 export LC_ALL=en_US.UTF-8
 
-#export GIT_PROMPT_EXECUTABLE="haskell"
+export _Z_DATA="/Users/audriusrutkus/logs/z/.z"
 
-export _Z_DATA="/Users/stormis/logs/z/.z"
-
-export ZDOTDIR="/Users/stormis/.config/zsh"
-export HISTFILE="/Users/stormis/.config/zsh/.zsh_history"
+export ZDOTDIR="/Users/audriusrutkus/.config/zsh"
+export HISTFILE="/Users/audriusrutkus/.config/zsh/.zsh_history"
 export HISTSIZE=10000
 
-export REDISCLI_HISTFILE="/Users/stormis/logs/redis-cli/rediscli_history"
-export LESSHISTFILE="/Users/stormis/logs/less/lesshst"
+export REDISCLI_HISTFILE="/Users/audriusrutkus/logs/redis-cli/rediscli_history"
+export LESSHISTFILE="/Users/audriusrutkus/logs/less/lesshst"
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/opt/fzf/bin:/Users/stormis/Queriee/bash:/Users/stormis/go/bin"
+export PATH=/Users/audriusrutkus/.yarn/bin:/Users/audriusrutkus/.config/yarn/global/node_modules/.bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/kitty.app/Contents/MacOS:/opt/homebrew/opt/fzf/bin

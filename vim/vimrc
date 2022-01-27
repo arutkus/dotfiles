@@ -36,10 +36,10 @@ Plug 'LumaKernel/fern-mapping-fzf.vim'
 
 call plug#end()
 
-source $HOME/.config/vim/config/settings.nvimrc
-source $HOME/.config/vim/config/variables.nvimrc
-source $HOME/.config/vim/config/commands.nvimrc
+source $HOME/dotfiles/vim/config/settings.nvimrc
+source $HOME/dotfiles/vim/config/variables.nvimrc
+source $HOME/dotfiles/vim/config/commands.nvimrc
 
-source $HOME/.config/vim/config/mappings/insert.nvimrc
-source $HOME/.config/vim/config/mappings/visual.nvimrc
-source $HOME/.config/vim/config/mappings/normal.nvimrc
+source $HOME/dotfiles/vim/config/mappings/insert.nvimrc
+source $HOME/dotfiles/vim/config/mappings/visual.nvimrc
+source $HOME/dotfiles/vim/config/mappings/normal.nvimrc

@@ -1,9 +1,7 @@
 alias sz='source ~/.zshrc'
 
-alias l='exa -la'
-alias ls='exa'
-alias la='exa -la --git'
-alias ll='exa -la --git --tree'
+alias l='ls -la'
+alias la='ls -la'
 alias ..='cd ..'
 alias ...='cd ../..'
 
@@ -11,12 +9,6 @@ alias ...='cd ../..'
 ### MAPPINGS ###
 ################
 
-alias ip='curl ifconfig.co'
-
-#alias cat='bat'
-#alias mux='tmuxinator'
-alias xx='tmux'
-alias cgr='composer global require'
 alias t='todo.sh -d ~/.config/todo/.todo.cfg'
 
 alias cp='cp -iv'
@@ -115,8 +107,8 @@ alias preview="fzf --preview 'bat --color \"always\" {}'"
 ### PHP ###
 ###########
 
-alias tt="vendor/bin/phpunit"
-alias php71="phpv php@7.1"
-alias php72="phpv php@7.2"
-alias php73="phpv php@7.3"
-alias php74="phpv php@7.4"
+#alias tt="vendor/bin/phpunit"
+#alias php71="phpv php@7.1"
+#alias php72="phpv php@7.2"
+#alias php73="phpv php@7.3"
+#alias php74="phpv php@7.4"
