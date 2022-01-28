@@ -1,11 +1,5 @@
-# Taps
-tap 'univeral-ctags'
-
-# Brew
 brew 'ack'
-brew 'ansible'
-brew 'bat'
-brew 'composer'
+brew 'awscli'
 brew 'fd'
 brew 'fzf'
 brew 'git-flow'

@@ -6,10 +6,6 @@ export FZF_DEFAULT_COMMAND='fd --type file --color auto'
 export FZF_CTRL_T_COMMAND='fd --no-ignore-vcs --hidden --type file --color auto'
 export FZF_ALT_C_COMMAND="fd -t d . $HOME"
 
-#export FZF_DEFAULT_OPTS='--color fg:-1,bg:-1,hl:230,fg+:3,bg+:233,hl+:229 --color info:150,prompt:110,spinner:150,pointer:167,marker:174'
-
-#export KEYTIMEOUT=1000
-
 # Useful for the install scripts
 export DOTFILES="$HOME/dotfiles"
 
@@ -17,22 +13,20 @@ export EDITOR="vim"
 export GIT_EDITOR="vim"
 export VISUAL="vim"
 
-export SAVEHIST=10000
-export XDG_CONFIG_HOME=$HOME
+#export SAVEHIST=100000
+#export XDG_CONFIG_HOME=$HOME
 #export TERM='xterm-256color'
 export TERM='screen-256color'
-export COMPOSER_HOME="$HOME/.composer"
-export ANSIBLE_HOSTS="$HOME/ansible/hosts"
 
 export LC_ALL=en_US.UTF-8
 
-export _Z_DATA="/Users/audriusrutkus/logs/z/.z"
 
-export ZDOTDIR="/Users/audriusrutkus/.config/zsh"
-export HISTFILE="/Users/audriusrutkus/.config/zsh/.zsh_history"
-export HISTSIZE=10000
+#export ZDOTDIR="$HOME/.config/zsh"
+export HISTFILE="$HOME/logs/zsh/.zsh_history"
+#export HISTSIZE=100000
 
-export REDISCLI_HISTFILE="/Users/audriusrutkus/logs/redis-cli/rediscli_history"
-export LESSHISTFILE="/Users/audriusrutkus/logs/less/lesshst"
+export REDISCLI_HISTFILE="$HOME/logs/rediscli_history"
+export LESSHISTFILE="$HOME/logs/less/lesshst"
+export _Z_DATA="$HOME/logs/z/.z"
 
 export PATH=/Users/audriusrutkus/.yarn/bin:/Users/audriusrutkus/.config/yarn/global/node_modules/.bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/kitty.app/Contents/MacOS:/opt/homebrew/opt/fzf/bin

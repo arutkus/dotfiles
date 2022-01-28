@@ -2,7 +2,7 @@
   "journals": {
     "default": "~/Dropbox/Apps/jrnl/journal.txt"
   },
-  "editor": "nvim -c Goyo -c startinsert",
+  "editor": "vim -c Goyo -c startinsert",
   "encrypt": false,
   "default_hour": 9,
   "default_minute": 0,
