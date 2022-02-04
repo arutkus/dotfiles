@@ -56,8 +56,9 @@ alias ftags='fetch --tags && git tag -l --sort=-creatordate | head -1'
 alias cleantags='git tag -l | xargs git tag -d && git fetch --tags'
 alias glog='git log --decorate --oneline --graph'
 
-alias fpull='dev && pull && master && pull'
-alias fpush='dev && push && master && push'
+#alias fpull='dev && pull && master && pull'
+alias fpull='master && pull'
+#alias fpush='dev && push && master && push'
 
 ################
 ### GIT-FLOW ###
