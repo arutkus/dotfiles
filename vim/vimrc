@@ -13,7 +13,11 @@ Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 
 "--- Search tools ---
-Plug '/usr/local/opt/fzf'
+if isdirectory("/usr/local/opt/fzf") 
+  Plug '/usr/local/opt/fzf' 
+else 
+  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } 
+ endif 
 Plug 'junegunn/fzf.vim'
 "Plug 'jremmen/vim-ripgrep'
 

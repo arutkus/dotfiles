@@ -105,7 +105,7 @@ function fali() {
 
 # Search with fzf and open selected file with Vim
 fe() (
-  IFS=$'\n' files=($(fzf --multi --select-1 --exit-0 --border --reverse --preview "bat --color=always {}"))
+  IFS=$'\n' files=($(fzf --multi --select-1 --exit-0 --border --reverse --preview "cat {}"))
   [[ -n "$files" ]] && ${EDITOR:-vim} "${files[@]}"
 )
 

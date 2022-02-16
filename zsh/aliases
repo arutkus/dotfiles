@@ -102,7 +102,7 @@ alias frebuild='rebuild && add && commit'
 alias co='gc $(git branch | fzf)'
 alias ca='gfadd'
 alias cor='gc --track $(git branch -r | fzf)'
-alias preview="fzf --preview 'bat --color \"always\" {}'"
+alias preview="fzf --preview 'cat --color \"always\" {}'"
 
 ###########
 ### PHP ###
