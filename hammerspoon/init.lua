@@ -195,10 +195,3 @@ hs.hotkey.bind(hyper, ';', function()
         hs.alert.show("No active window")
     end
 end)
-
-
---------------------------------------------------------------------------------
--- The End
---------------------------------------------------------------------------------
-
-hs.notify.show('Hammerspoon loaded', '', '...more like hammerspork') -- thnx jesseleite

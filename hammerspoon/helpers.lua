@@ -81,3 +81,4 @@ function resetWhenSwitchingScreen(f)
     f()
   end):start()
 end
+

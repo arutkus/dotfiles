@@ -1,4 +1,5 @@
 alias sz='source ~/.zshrc'
+alias python='python3'
 
 alias l='ls -la'
 alias la='ls -la'
@@ -29,9 +30,9 @@ alias eali='vim ~/dotfiles/zsh/aliases && sz'
 ### NAVIGATION ###
 ##################
 
-alias dot='cd ~/dotfiles && la && status'
+alias dot='cd ~/dotfiles && l && status'
 alias vi='vim'
-alias drop='cd ~/Dropbox/Apps/ && la'
+alias drop='cd ~/Dropbox/Apps/ && l'
 
 ###########
 ### GIT ###
@@ -113,3 +114,5 @@ alias preview="fzf --preview 'cat --color \"always\" {}'"
 #alias php72="phpv php@7.2"
 #alias php73="phpv php@7.3"
 #alias php74="phpv php@7.4"
+
+alias notes='vim ~/notes/wip'

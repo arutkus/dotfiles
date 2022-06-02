@@ -43,3 +43,4 @@ return (function(movements)
     sequenceNumber = sequenceNumber % cycleLength + 1
   end
 end)
+

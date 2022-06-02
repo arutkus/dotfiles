@@ -20,7 +20,6 @@ export TERM='screen-256color'
 
 export LC_ALL=en_US.UTF-8
 
-
 #export ZDOTDIR="$HOME/.config/zsh"
 export HISTFILE="$HOME/logs/zsh/.zsh_history"
 #export HISTSIZE=100000

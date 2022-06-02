@@ -21,7 +21,6 @@ bindkey -M vicmd v edit-command-line
 
 bindkey "ç" fzf-cd-widget
 
-
 HISTSIZE=100000
 SAVEHIST=100000
 setopt EXTENDED_HISTORY          # Write the history file in the ":start:elapsed;command" format.
