@@ -15,8 +15,16 @@ RPROMPT='$(git_super_status)'
 ZSH_THEME_GIT_PROMPT_BRANCH="%{$fg_bold[green]%}"
 
 bindkey -s '^f' 'fe^M'
+bindkey -s '^g' 'vr^M'
 
 autoload edit-command-line; zle -N edit-command-line
+
+autoload bashcompinit && bashcompinit
+autoload -Uz compinit && compinit
+complete -C '/opt/homebrew/bin/aws_completer' aws
+
+source <(kubectl completion zsh)
+
 bindkey -M vicmd v edit-command-line
 
 bindkey "ç" fzf-cd-widget

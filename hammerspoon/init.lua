@@ -118,7 +118,7 @@ end)
 
 -- Toogle the App between hide and show
 hs.hotkey.bind(hyper, 'return' , function() 
-    toogleApp('Kitty') 
+    toogleApp('Alacritty') 
 end)
 
 hs.hotkey.bind(hyper, '0' , function()
@@ -133,28 +133,12 @@ hs.hotkey.bind(hyper, '8' , function()
     toogleApp('Spotify')
 end)
 
-hs.hotkey.bind(hyper, '6' , function()
-    toogleApp('Notes')
-end)
-
-hs.hotkey.bind(hyper, '5' , function()
-    toogleApp('Tinkerwell')
-end)
-
-hs.hotkey.bind(hyper, '4' , function()
-    toogleApp('Mail')
-end)
-
-hs.hotkey.bind(hyper, '3' , function()
-    toogleApp('PhpStorm')
-end)
-
 hs.hotkey.bind(hyper, '2' , function()
     toogleApp('Slack')
 end)
 
 hs.hotkey.bind(hyper, '1' , function()
-    toogleApp('TablePlus')
+    toogleApp('Goland')
 end)
 
 function toogleApp(_app) 

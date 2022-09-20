@@ -1,0 +1,27 @@
+//{
+//    "languageserver": {
+//        "terraform": {
+//            "command": "terraform-lsp",
+//            "filetypes": [
+//                "terraform",
+//                "tf"
+//            ],
+//            "initializationOptions": {},
+//            "settings": {}
+//        }
+//    }
+//}
+{
+	"languageserver": {
+		"terraform": {
+			"command": "terraform-ls",
+			"args": ["serve"],
+			"filetypes": [
+				"terraform",
+				"tf"
+			],
+			"initializationOptions": {},
+			"settings": {}
+		}
+	}
+}

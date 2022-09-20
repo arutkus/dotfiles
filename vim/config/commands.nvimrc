@@ -35,19 +35,6 @@ command! -nargs=? Fold :call CocAction('fold', <f-args>)
 " Add `:OR` command for organize imports of the current buffer.
 command! -nargs=0 OR :call CocAction('runCommand', 'editor.action.organizeImport')
 
-"Plugin: FZF
-
-"" --column: Show column number
-" --line-number: Show line number
-" --no-heading: Do not show file headings in results
-" --fixed-strings: Search term as a literal string
-" --ignore-case: Case insensitive search
-" --no-ignore: Do not respect .gitignore, etc...
-" --hidden: Search hidden files and folders
-" --follow: Follow symlinks
-" --glob: Additional conditions for search (in this case ignore everything in the .git/ folder)
-
-
 "Plugin: GOYO
 autocmd! User GoyoEnter nested call <SID>goyo_enter()
 autocmd! User GoyoLeave nested call <SID>goyo_leave()
@@ -128,3 +115,4 @@ function! s:goyo_leave()
   hi Normal ctermbg=NONE guibg=NONE
 endfunction
 
+command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}),  <bang>0)

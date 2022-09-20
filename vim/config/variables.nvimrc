@@ -4,12 +4,16 @@ let maplocalleader = "\\"
 "disable .netrwhist file
 let g:netrw_dirhistmax = 0
 
-let g:ackprg = 'ag --vimgrep --smart-case' 
+"Plugin: wiki
+let g:wiki_root = '~/Dropbox/Apps/wiki'
+let g:wiki_filetypes = ['md']
+let g:wiki_link_extension = '.md'
 
-let g:go_term_enabled = 1
-let g:go_term_mode = "silent keepalt rightbelow 15 split"
-let g:go_def_reuse_buffer = 1
-let g:go_term_reuse = 1
+"Plugin: mkdx
+let g:mkdx#settings = {
+  \'tab': { 'enable': 0  },
+  \'enter': { 'enable': 0 },
+\}
 
 "Plugin: FZF
 let g:fzf_action = {
@@ -78,42 +82,8 @@ let g:lightline#bufferline#show_number  = 2
 let g:lightline#bufferline#shorten_path = 0
 let g:lightline#bufferline#unnamed      = '[No Name]'
 
-"Plugin: Sneak
-let g:sneak#label = 1
-
-" case insensitive sneak
-let g:sneak#use_ic_scs = 1
-
-" immediately move to the next instance of search, if you move the cursor sneak is back to default behavior
-let g:sneak#s_next = 1
-
-" remap so I can use , and ; with f and t
-"map gS <Plug>Sneak_,
-"map gs <Plug>Sneak_;
-
-" Change the colors
-highlight Sneak guifg=black guibg=#00d423 ctermfg=black ctermbg=cyan
-highlight SneakScope guifg=red guibg=yellow ctermfg=red ctermbg=yellow
-
-"Plugin: floaterm
-let g:floaterm_keymap_toggle = '§'
-let g:floaterm_keymap_next   = '<F2>'
-let g:floaterm_keymap_prev   = '<F3>'
-let g:floaterm_keymap_new    = '<F4>'
-
-let g:floaterm_gitcommit='floaterm'
-let g:floaterm_autoinsert=1
-let g:floaterm_width=0.8
-let g:floaterm_height=0.8
-let g:floaterm_wintitle=0
-let g:floaterm_autoclose=1
-
-let g:go_highlight_types = 1
-let g:go_highlight_fields = 1
-let g:go_highlight_functions = 1
-let g:go_highlight_function_calls = 1
-let g:go_highlight_operators = 1
-let g:go_highlight_extra_types = 1
+"Plugin: vim-surrond 
+let b:surround_{char2nr('c')} = "```\r```" "Use Sc in visual mode to surround with ```  ```
 
 "Plugin: Fern
 let g:loaded_netrw  = 1
@@ -121,7 +91,8 @@ let g:loaded_netrwPlugin = 1
 let g:loaded_netrwSettings = 1
 let g:loaded_netrwFileHandlers = 1
 
-" Custom settings and mappings.
 let g:fern#disable_default_mappings = 1
 let g:fern#disable_drawer_auto_quit   = 1
 let g:fern#disable_viewer_hide_cursor = 1
+let g:fern#default_hidden = 1
+

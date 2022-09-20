@@ -3,6 +3,7 @@
 ###############################
 
 export FZF_DEFAULT_COMMAND='fd --type file --color auto'
+#export FZF_DEFAULT_COMMAND='rg --files --ignore-vcs --hidden'
 export FZF_CTRL_T_COMMAND='fd --no-ignore-vcs --hidden --type file --color auto'
 export FZF_ALT_C_COMMAND="fd -t d . $HOME"
 

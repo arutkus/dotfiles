@@ -1,6 +1,11 @@
 call plug#begin('~/.vim/plugged')
 
+Plug 'vim-scripts/DrawIt'
+
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'hashivim/vim-terraform'
+
+Plug 'tpope/vim-fugitive'
 
 "--- Appearance ---
 Plug 'lifepillar/vim-gruvbox8'
@@ -9,6 +14,8 @@ Plug 'itchyny/lightline.vim'
 Plug 'mengelbrecht/lightline-bufferline'
 
 "--- Zen mode --
+Plug 'lervag/wiki.vim'
+Plug 'SidOfc/mkdx'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 
@@ -19,7 +26,6 @@ else
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } 
  endif 
 Plug 'junegunn/fzf.vim'
-"Plug 'jremmen/vim-ripgrep'
 
 "--- Text edit ---
 Plug 'machakann/vim-highlightedyank'
@@ -32,9 +38,7 @@ Plug 'baverman/vial',
 Plug 'baverman/vial-http',
 Plug 'dhleong/vim-wildwildws', {'do': 'npm i -g wildwildws-d'}
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'justinmk/vim-sneak'
 
-Plug 'voldikss/vim-floaterm'
 Plug 'lambdalisue/fern.vim'
 Plug 'LumaKernel/fern-mapping-fzf.vim'
 

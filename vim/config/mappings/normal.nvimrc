@@ -4,11 +4,12 @@ nnoremap <leader>o :only<CR>
 nmap <Leader>q :q<CR>
 nmap <Leader>w :w<CR>
 map <silent><Leader><esc> :noh<cr>
+nmap <Leader>now :r!date "+\%A \%b \%d \%Y \%T"<cr>
 
 " Plugin: fzf
-nmap <C-f> :GFiles<CR>
-nmap <Leader>f :Files<CR>
-nmap <C-t> :BTags<CR>
+nmap <C-f> :Files<CR>
+nmap <Leader>f :GFiles<CR>
+nnoremap <Leader>g :Rg<CR>
 
 " Plugin: fern
 "noremap <silent> <Leader>= :Fern . -drawer -reveal=% -toggle -width=35<CR><C-w>=
@@ -82,7 +83,7 @@ nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
 " Plugin: Goyo
-nnoremap <cr><cr> :Goyo<cr>
+nnoremap <Leader><cr> :Goyo<cr>
 
 " Plugin: tmux-navigator
 nnoremap <silent> <C-h> :TmuxNavigateLeft<cr>
