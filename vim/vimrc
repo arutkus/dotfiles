@@ -1,51 +1,57 @@
-call plug#begin('~/.vim/plugged')
+"Install vim-plug if it doesn't exist
+let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+if empty(glob(data_dir . '/autoload/plug.vim'))
+  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
 
-Plug 'vim-scripts/DrawIt'
+source $HOME/dotfiles/vim/config/variables.nvimrc
 
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'hashivim/vim-terraform'
+call plug#begin(data_dir . '/plugged')
 
-Plug 'tpope/vim-fugitive'
-
+source $HOME/dotfiles/vim/config/plugins/drawit.vim
+source $HOME/dotfiles/vim/config/plugins/coc.vim
+source $HOME/dotfiles/vim/config/plugins/vim-terraform.vim
+source $HOME/dotfiles/vim/config/plugins/vim-fugitive.vim
+source $HOME/dotfiles/vim/config/plugins/vim-gitgutter.vim
+source $HOME/dotfiles/vim/config/plugins/vim-commentary.vim
+source $HOME/dotfiles/vim/config/plugins/vim-context-commentstring.vim
+"
 "--- Appearance ---
-Plug 'lifepillar/vim-gruvbox8'
-Plug 'sheerun/vim-polyglot'
-Plug 'itchyny/lightline.vim'
-Plug 'mengelbrecht/lightline-bufferline'
+source $HOME/dotfiles/vim/config/plugins/vim-gruvbox8.vim
+source $HOME/dotfiles/vim/config/plugins/vim-polyglot.vim
+source $HOME/dotfiles/vim/config/plugins/lightline.vim
+source $HOME/dotfiles/vim/config/plugins/lightline-bufferline.vim
 
 "--- Zen mode --
-Plug 'lervag/wiki.vim'
-Plug 'SidOfc/mkdx'
-Plug 'junegunn/goyo.vim'
-Plug 'junegunn/limelight.vim'
+source $HOME/dotfiles/vim/config/plugins/wiki.vim
+source $HOME/dotfiles/vim/config/plugins/mkdx.vim
+source $HOME/dotfiles/vim/config/plugins/goyo.vim
+source $HOME/dotfiles/vim/config/plugins/limelight.vim
 
 "--- Search tools ---
-if isdirectory("/usr/local/opt/fzf") 
-  Plug '/usr/local/opt/fzf' 
-else 
-  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } 
- endif 
-Plug 'junegunn/fzf.vim'
+source $HOME/dotfiles/vim/config/plugins/fzf.vim
 
 "--- Text edit ---
-Plug 'machakann/vim-highlightedyank'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-repeat'
-Plug 'jiangmiao/auto-pairs'
+source $HOME/dotfiles/vim/config/plugins/vim-highlightedyank.vim
+source $HOME/dotfiles/vim/config/plugins/vim-surround.vim
+source $HOME/dotfiles/vim/config/plugins/vim-repeat.vim
+" source $HOME/dotfiles/vim/config/plugins/auto-pairs.vim
 
 "--- Miscellaneous
-Plug 'baverman/vial',
-Plug 'baverman/vial-http',
-Plug 'dhleong/vim-wildwildws', {'do': 'npm i -g wildwildws-d'}
-Plug 'christoomey/vim-tmux-navigator'
+source $HOME/dotfiles/vim/config/plugins/vial.vim
+source $HOME/dotfiles/vim/config/plugins/vial-http.vim
+source $HOME/dotfiles/vim/config/plugins/vim-wildwildws.vim
+source $HOME/dotfiles/vim/config/plugins/vim-tmux-navigator.vim
+source $HOME/dotfiles/vim/config/plugins/tmux-complete.vim
+source $HOME/dotfiles/vim/config/plugins/fern.vim
 
-Plug 'lambdalisue/fern.vim'
-Plug 'LumaKernel/fern-mapping-fzf.vim'
+"--- Golang ---
+"source $HOME/dotfiles/vim/config/plugins/vim-go.vim
 
 call plug#end()
 
 source $HOME/dotfiles/vim/config/settings.nvimrc
-source $HOME/dotfiles/vim/config/variables.nvimrc
 source $HOME/dotfiles/vim/config/commands.nvimrc
 
 source $HOME/dotfiles/vim/config/mappings/insert.nvimrc

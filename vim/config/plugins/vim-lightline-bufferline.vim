@@ -1,0 +1,1 @@
+Plug 'mengelbrecht/lightline-bufferline'

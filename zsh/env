@@ -2,10 +2,22 @@
 # EXPORT ENVIRONMENT VARIABLE #
 ###############################
 
-export FZF_DEFAULT_COMMAND='fd --type file --color auto'
+#export FZF_DEFAULT_COMMAND='fd --type file --color auto'
 #export FZF_DEFAULT_COMMAND='rg --files --ignore-vcs --hidden'
-export FZF_CTRL_T_COMMAND='fd --no-ignore-vcs --hidden --type file --color auto'
-export FZF_ALT_C_COMMAND="fd -t d . $HOME"
+#export FZF_CTRL_T_COMMAND='fd --no-ignore-vcs --hidden --type file --color auto'
+#export FZF_ALT_C_COMMAND="fd -t d . $HOME"
+
+export FZF_DEFAULT_COMMAND='fd --type f --color=never --hidden'
+export FZF_DEFAULT_OPTS='--no-height --color=bg+:#343d46,gutter:-1,pointer:#ff3c3c,info:#0dbc79,hl:#0dbc79,hl+:#23d18b'
+
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_CTRL_T_OPTS="--preview 'bat --color=always --line-range :50 {}'"
+
+export FZF_ALT_C_COMMAND='fd --type d . --color=never --hidden'
+export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -50'"
+
+export FZF_TMUX=1
+export FZF_TMUX_OPTS='-p60%,60% --color=border:green --border --padding 1,5 --margin 1,0'
 
 # Useful for the install scripts
 export DOTFILES="$HOME/dotfiles"
@@ -29,4 +41,4 @@ export REDISCLI_HISTFILE="$HOME/logs/rediscli_history"
 export LESSHISTFILE="$HOME/logs/less/lesshst"
 export _Z_DATA="$HOME/logs/z/.z"
 
-export PATH=/Users/audriusrutkus/.yarn/bin:/Users/audriusrutkus/.config/yarn/global/node_modules/.bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/kitty.app/Contents/MacOS:/opt/homebrew/opt/fzf/bin
+#export PATH=/Users/audriusrutkus/.yarn/bin:/Users/audriusrutkus/.config/yarn/global/node_modules/.bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/kitty.app/Contents/MacOS:/opt/homebrew/opt/fzf/bin

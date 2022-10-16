@@ -25,18 +25,19 @@ set conceallevel=1
 set background=dark
 
 colorscheme gruvbox8_hard
-set nolazyredraw
+"set nolazyredraw
 hi Normal ctermbg=NONE guibg=NONE
 
 set formatoptions-=cro    " Stop newline continution of comments
 set showtabline=2         " always show tabs"
-set nonumber
 set cursorline            " highlight current line
 set hlsearch              " highlight all searched
 set incsearch             " highlight as you search
+set number
 set numberwidth=6         " make the number gutter 6 characters wide
 set laststatus=2          " last window always has a statusline
 set ruler                 " Always show info along bottom.
+set scrolloff=10
 
 set statusline=%<%f\%h%m%r%=%-20.(line=%l\ \ col=%c%V\ \ totlin=%L%)\ \ \%h%m%r%=%-40(bytval=0x%B,%n%Y%)\%P
 
@@ -61,8 +62,8 @@ set completeopt=menu,menuone,preview,noselect,noinsert
 
 set shortmess+=c
 set cmdheight=1
-set updatetime=300
-set signcolumn=no
+set updatetime=1000
+set signcolumn=yes
 
 set ttyfast
 set re=0

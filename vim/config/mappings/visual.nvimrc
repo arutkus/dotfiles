@@ -4,3 +4,6 @@ vnoremap L g_
 
 vnoremap < <gv
 vnoremap > >gv
+
+vnoremap y myy`y
+vnoremap Y myY`y
