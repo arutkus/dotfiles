@@ -1,14 +1,16 @@
 alias sz='source ~/.zshrc'
-alias python='python3'
 
+alias python='python3'
 alias l='ls -ahog'
 alias la='ls -la'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias infra='cd ~/interactio/infrastructure'
-alias wiki='vim +WikiIndex'
-alias wikj='vim +WikiJournal'
+alias vim='nvim'
 alias vr='vim -c "Rg"'
+alias wip='vim ~/Dropbox/obsidian/Work/_WIP.md'
+alias note='notes'
+alias notes='vim ~/Dropbox/obsidian/Work/_Notes.md'
 
 ################
 ### MAPPINGS ###
@@ -25,7 +27,10 @@ alias rm='rm -i'
 alias :q='exit'
 
 alias k='kubectl'
+alias kube='kubectl'
 alias t='terraform'
+alias twl='terraform workspace list'
+alias tws='terraform workspace select'
 alias e='echo -n'
 alias b='base64'
 alias bd='base64 -d'
@@ -77,36 +82,20 @@ alias fpul='main && pull'
 ### GIT-FLOW ###
 ################
 
-alias gf='git flow'
-alias hotfix='gf hotfix'
-alias feature='gf feature'
-alias release='gf release'
+#alias gf='git flow'
+#alias hotfix='gf hotfix'
+#alias feature='gf feature'
+#alias release='gf release'
 
-alias hstart='hotfix start'
-alias hpublish='hotfix publish'
-alias hfinish='hotfix finish -n'
-alias rstart='release start'
-alias rpublish='release publish'
-alias rfinish='release finish -n'
-alias fstart='feature start'
-alias fpublish='feature publish'
-alias ffinish='feature finish'
-
-#################
-###  LARAVEL  ###
-#################
-
-#alias a='php artisan'
-#alias at='a tinker'
-#alias acleanup='a clear-compiled && a cache:clear && a route:clear && a view:clear && a config:clear'
-#alias ide-models="a ide-helper:models -N"
-
-#################
-### DEV-COMBO ###
-#################
-
-alias rebuild='npm install && npm run dev'
-alias frebuild='rebuild && add && commit'
+#alias hstart='hotfix start'
+#alias hpublish='hotfix publish'
+#alias hfinish='hotfix finish -n'
+#alias rstart='release start'
+#alias rpublish='release publish'
+#alias rfinish='release finish -n'
+#alias fstart='feature start'
+#alias fpublish='feature publish'
+#alias ffinish='feature finish'
 
 ###########
 ### FZF ###
@@ -116,15 +105,3 @@ alias co='gc $(git branch | fzf)'
 alias ca='gfadd'
 alias cor='gc --track $(git branch -r | fzf)'
 alias preview="fzf --preview 'cat --color \"always\" {}'"
-
-###########
-### PHP ###
-###########
-
-#alias tt="vendor/bin/phpunit"
-#alias php71="phpv php@7.1"
-#alias php72="phpv php@7.2"
-#alias php73="phpv php@7.3"
-#alias php74="phpv php@7.4"
-
-alias notes='vim ~/Dropbox/Apps/wiki/notes/index.wiki'

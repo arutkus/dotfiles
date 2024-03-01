@@ -1,3 +1,11 @@
+function terraform_prompt()
+{
+    if [ -d .terraform ]; then
+        workspace="$(command terraform workspace show 2>/dev/null)"
+        echo " [${workspace}] "
+    fi
+}
+
 function gdf() {
   git diff --color | diff-so-fancy | less -r
 }
@@ -29,28 +37,12 @@ function fali() {
   eval $foo
 }
 
-# Search with fzf and open selected file with Vim
-# function fe() (
-#   IFS=$'\n' files=($(fzf -p80%,80% --multi --select-1 --exit-0 --color=border:green --border --padding 1,5 --margin 1,0 --reverse --preview "bat --color=always --line-range :400 {}"))
-#   [[ -n "$files" ]] && ${EDITOR:-vim} "${files[@]}"
-# )
-
-# c-e
-function kc() (
-  local kubeconfig=$(ls -A1 ~/.kube/*.yaml | fzf --prompt="kubeconfig > ")
-  local namespace=$(kubectl --kubeconfig $kubeconfig get namespaces -o custom-columns=":metadata.name" --no-headers | fzf --prompt="namespace > ")
-  local object=$(cat ~/.kube/_helpers/objects | fzf --prompt="get > ")
-
-  echo "kubectl --kubeconfig ${kubeconfig} -n ${namespace} get ${object}"
-)
-
 function displayFZFFiles {
-  echo $(fzf -p80%,80% --multi --select-1 --exit-0  --color=border:green --border --padding 1,5 --margin 1,0 --reverse --preview "bat --color=always --theme=gruvbox-dark --line-range :400 {}") | tr -d '"'
-  #echo $(fzf --multi --select-1 --exit-0  --color=border:green --border --padding 1,5 --margin 1,0 --reverse --preview "bat --color=always --theme=gruvbox-dark --line-range :400 {}") | tr -d '"'
+  echo $(fzf -p80%,80% --multi --select-1 --exit-0  --color=border:green --border --padding 1,5 --margin 1,0 --reverse --preview "bat --color=always --theme=Nord --line-range :400 {}") | tr -d '"'
 }
 
 function vimGoToFiles {
-  vimExists=$(which vim)
+  vimExists=$(which nvim)
   if [ -z "$vimExists" ]; then
     return;
   fi;
@@ -62,7 +54,13 @@ function vimGoToFiles {
       if [ "$TERM" != "xterm-256color" ]; then
           TERM="xterm-256color"
       fi
-      eval vim $selection;
+      eval nvim $selection;
   fi;
 }
 
+function assume-role() {
+  OUT=$(aws sts assume-role --role-arn $1 --role-session-name $2);\
+  export AWS_ACCESS_KEY_ID=$(echo $OUT | jq -r '.Credentials''.AccessKeyId');\
+  export AWS_SECRET_ACCESS_KEY=$(echo $OUT | jq -r '.Credentials''.SecretAccessKey');\
+  export AWS_SESSION_TOKEN=$(echo $OUT | jq -r '.Credentials''.SessionToken');
+}

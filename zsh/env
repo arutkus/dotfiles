@@ -2,16 +2,28 @@
 # EXPORT ENVIRONMENT VARIABLE #
 ###############################
 
-#export FZF_DEFAULT_COMMAND='fd --type file --color auto'
-#export FZF_DEFAULT_COMMAND='rg --files --ignore-vcs --hidden'
-#export FZF_CTRL_T_COMMAND='fd --no-ignore-vcs --hidden --type file --color auto'
-#export FZF_ALT_C_COMMAND="fd -t d . $HOME"
+export LC_ALL=en_US.UTF-8
+export TERM='screen-256color'
+export EDITOR="vim"
+export GIT_EDITOR="vim"
+export VISUAL="vim"
+
+export HISTFILE="$HOME/logs/zsh/.zsh_history"
+export HISTSIZE=1000000
+export SAVEHIST=1000000
+
+export REDISCLI_HISTFILE="$HOME/logs/rediscli_history"
+export LESSHISTFILE="$HOME/logs/less/lesshst"
+export _Z_DATA="$HOME/logs/z/.z"
+#export ZDOTDIR="$HOME/.config/zsh"
+
+export DOTFILES="$HOME/dotfiles"
 
 export FZF_DEFAULT_COMMAND='fd --type f --color=never --hidden'
 export FZF_DEFAULT_OPTS='--no-height --color=bg+:#343d46,gutter:-1,pointer:#ff3c3c,info:#0dbc79,hl:#0dbc79,hl+:#23d18b'
 
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-export FZF_CTRL_T_OPTS="--preview 'bat --color=always --line-range :50 {}'"
+export FZF_CTRL_T_OPTS="--preview 'bat --color=always --theme=Nord --line-range :50 {}'"
 
 export FZF_ALT_C_COMMAND='fd --type d . --color=never --hidden'
 export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -50'"
@@ -19,26 +31,3 @@ export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -50'"
 export FZF_TMUX=1
 export FZF_TMUX_OPTS='-p60%,60% --color=border:green --border --padding 1,5 --margin 1,0'
 
-# Useful for the install scripts
-export DOTFILES="$HOME/dotfiles"
-
-export EDITOR="vim"
-export GIT_EDITOR="vim"
-export VISUAL="vim"
-
-#export SAVEHIST=100000
-#export XDG_CONFIG_HOME=$HOME
-#export TERM='xterm-256color'
-export TERM='screen-256color'
-
-export LC_ALL=en_US.UTF-8
-
-#export ZDOTDIR="$HOME/.config/zsh"
-export HISTFILE="$HOME/logs/zsh/.zsh_history"
-#export HISTSIZE=100000
-
-export REDISCLI_HISTFILE="$HOME/logs/rediscli_history"
-export LESSHISTFILE="$HOME/logs/less/lesshst"
-export _Z_DATA="$HOME/logs/z/.z"
-
-#export PATH=/Users/audriusrutkus/.yarn/bin:/Users/audriusrutkus/.config/yarn/global/node_modules/.bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/kitty.app/Contents/MacOS:/opt/homebrew/opt/fzf/bin
